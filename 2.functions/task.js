@@ -84,10 +84,15 @@ return sumEvenElement / countEvenElement;
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = -Infinity;
   for (let i = 0; i < arrOfArr.length; i++) {
-    const mas = func(...arrOfArr[i]);
+    let mas = func(...arrOfArr[i]);
+    if(mas > maxWorkerResult) {
+      maxWorkerResult = mas;
+    }
    }
-
+   return maxWorkerResult;
 }
+
+
 
 
 console.log(summElementsWorker(0));
