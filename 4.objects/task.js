@@ -23,9 +23,9 @@ Student.prototype.getAverage = function () {
   if (this.marks === undefined) {
     return 0;
   } else {
-    return this.marks.reduce ( ( acc, num ) => acc + num / this.marks.length), 0;
+    return this.marks.reduce (( acc, num ) => acc + num / this.marks.length, 0);
   } 
-}
+} 
 
 Student.prototype.exclude = function (reason) {
     delete this.marks;
